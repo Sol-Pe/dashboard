@@ -320,8 +320,6 @@ function SidebarMenu() {
             </List>
           </SubMenuWrapper>
         </List>
-
-
         <List
           component="div"
           subheader={
@@ -333,25 +331,25 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <NextLink href="/management/profile" passHref>
+                <NextLink href="#" passHref>
                   <Button
                     className={
-                      currentRoute === '/management/profile' ? 'active' : ''
+                      currentRoute === '#' ? 'active' : ''
                     }
                     disableRipple
                     component="a"
                     onClick={closeSidebar}
                     startIcon={<AccountCircleTwoToneIcon />}
                   >
-                    User Profile
+                    Docs 1
                   </Button>
                 </NextLink>
               </ListItem>
               <ListItem component="div">
-                <NextLink href="/management/profile/settings" passHref>
+                <NextLink href="#" passHref>
                   <Button
                     className={
-                      currentRoute === '/management/profile/settings'
+                      currentRoute === '#'
                         ? 'active'
                         : ''
                     }
@@ -360,161 +358,13 @@ function SidebarMenu() {
                     onClick={closeSidebar}
                     startIcon={<DisplaySettingsTwoToneIcon />}
                   >
-                    Account Settings
+                    Docs 2
                   </Button>
                 </NextLink>
               </ListItem>
             </List>
           </SubMenuWrapper>
         </List>
-        {/* <List
-          component="div"
-          subheader={
-            <ListSubheader component="div" disableSticky>
-              Components
-            </ListSubheader>
-          }
-        >
-          <SubMenuWrapper>
-            <List component="div">
-              <ListItem component="div">
-                <NextLink href="/components/buttons" passHref>
-                  <Button
-                    className={
-                      currentRoute === '/components/buttons' ? 'active' : ''
-                    }
-                    disableRipple
-                    component="a"
-                    onClick={closeSidebar}
-                    startIcon={<BallotTwoToneIcon />}
-                  >
-                    Buttons
-                  </Button>
-                </NextLink>
-              </ListItem>
-              <ListItem component="div">
-                <NextLink href="/components/modals" passHref>
-                  <Button
-                    className={
-                      currentRoute === '/components/modals' ? 'active' : ''
-                    }
-                    disableRipple
-                    component="a"
-                    onClick={closeSidebar}
-                    startIcon={<BeachAccessTwoToneIcon />}
-                  >
-                    Modals
-                  </Button>
-                </NextLink>
-              </ListItem>
-              <ListItem component="div">
-                <NextLink href="/components/accordions" passHref>
-                  <Button
-                    className={
-                      currentRoute === '/components/accordions' ? 'active' : ''
-                    }
-                    disableRipple
-                    component="a"
-                    onClick={closeSidebar}
-                    startIcon={<EmojiEventsTwoToneIcon />}
-                  >
-                    Accordions
-                  </Button>
-                </NextLink>
-              </ListItem>
-              <ListItem component="div">
-                <NextLink href="/components/tabs" passHref>
-                  <Button
-                    className={
-                      currentRoute === '/components/tabs' ? 'active' : ''
-                    }
-                    disableRipple
-                    component="a"
-                    onClick={closeSidebar}
-                    startIcon={<FilterVintageTwoToneIcon />}
-                  >
-                    Tabs
-                  </Button>
-                </NextLink>
-              </ListItem>
-              <ListItem component="div">
-                <NextLink href="/components/badges" passHref>
-                  <Button
-                    className={
-                      currentRoute === '/components/badges' ? 'active' : ''
-                    }
-                    disableRipple
-                    component="a"
-                    onClick={closeSidebar}
-                    startIcon={<HowToVoteTwoToneIcon />}
-                  >
-                    Badges
-                  </Button>
-                </NextLink>
-              </ListItem>
-              <ListItem component="div">
-                <NextLink href="/components/tooltips" passHref>
-                  <Button
-                    className={
-                      currentRoute === '/components/tooltips' ? 'active' : ''
-                    }
-                    disableRipple
-                    component="a"
-                    onClick={closeSidebar}
-                    startIcon={<LocalPharmacyTwoToneIcon />}
-                  >
-                    Tooltips
-                  </Button>
-                </NextLink>
-              </ListItem>
-              <ListItem component="div">
-                <NextLink href="/components/avatars" passHref>
-                  <Button
-                    className={
-                      currentRoute === '/components/avatars' ? 'active' : ''
-                    }
-                    disableRipple
-                    component="a"
-                    onClick={closeSidebar}
-                    startIcon={<RedeemTwoToneIcon />}
-                  >
-                    Avatars
-                  </Button>
-                </NextLink>
-              </ListItem>
-              <ListItem component="div">
-                <NextLink href="/components/cards" passHref>
-                  <Button
-                    className={
-                      currentRoute === '/components/cards' ? 'active' : ''
-                    }
-                    disableRipple
-                    component="a"
-                    onClick={closeSidebar}
-                    startIcon={<SettingsTwoToneIcon />}
-                  >
-                    Cards
-                  </Button>
-                </NextLink>
-              </ListItem>
-              <ListItem component="div">
-                <NextLink href="/components/forms" passHref>
-                  <Button
-                    className={
-                      currentRoute === '/components/forms' ? 'active' : ''
-                    }
-                    disableRipple
-                    component="a"
-                    onClick={closeSidebar}
-                    startIcon={<TrafficTwoToneIcon />}
-                  >
-                    Forms
-                  </Button>
-                </NextLink>
-              </ListItem>
-            </List>
-          </SubMenuWrapper>
-        </List> */}
         <List
           component="div"
           subheader={
