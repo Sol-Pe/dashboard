@@ -58,7 +58,7 @@ function Overview() {
                   variant="contained"
                   sx={{ ml: 2 }}
                 >
-                  Dashboard
+                  Wallet
                 </Button>
               </Box>
             </Box>
@@ -66,18 +66,6 @@ function Overview() {
         </Container>
       </HeaderWrapper>
       <Hero />
-      <Container maxWidth="lg" sx={{ mt: 8 }}>
-        <Typography textAlign="center" variant="subtitle1">
-          Crafted by{' '}
-          <Link
-            href="https://shastraos.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Team Shastra
-          </Link>
-        </Typography>
-      </Container>
     </OverviewWrapper>
   );
 }

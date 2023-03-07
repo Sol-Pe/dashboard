@@ -124,9 +124,7 @@ function Status500() {
                     fontWeight="normal"
                     sx={{ mb: 4 }}
                   >
-                    High performance React template built with lots of powerful
-                    Material-UI components across multiple product niches for
-                    fast & perfect apps development processes.
+                  Solpe is a payment gateway and merchant dashboard built on the Solana blockchain, designed to track payment data and provide merchants with comprehensive analytics.
                   </TypographySecondary>
                   <Button href="/" size="large" variant="contained">
                     Overview
