@@ -12,6 +12,7 @@ specifiers:
   '@mui/styles': 5.8.0
   '@solana/wallet-adapter-base': ^0.9.22
   '@solana/wallet-adapter-ledger': ^0.9.24
+  '@solana/wallet-adapter-material-ui': ^0.16.28
   '@solana/wallet-adapter-react': ^0.15.30
   '@solana/wallet-adapter-react-ui': ^0.9.29
   '@solana/wallet-adapter-wallets': ^0.19.15
@@ -32,9 +33,11 @@ specifiers:
   next: 12.1.6
   next-images: 1.8.4
   next-transpile-modules: 9.0.0
+  notistack: ^3.0.1
   nprogress: 0.2.0
   numeral: 2.0.6
   prettier: 2.6.2
+  prop-types: ^15.8.1
   react: 17.0.2
   react-apexcharts: 1.4.0
   react-custom-scrollbars-2: 4.4.0
@@ -54,6 +57,7 @@ dependencies:
   '@mui/styles': 5.8.0_adlholpkqbiq5amp2fy4vkqcli
   '@solana/wallet-adapter-base': 0.9.22_@solana+web3.js@1.73.3
   '@solana/wallet-adapter-ledger': 0.9.24_@solana+web3.js@1.73.3
+  '@solana/wallet-adapter-material-ui': 0.16.28_6y2kqynxbmfd7p66dj5tggfl6u
   '@solana/wallet-adapter-react': 0.15.30_alczyghn3njhid5xp5niyuxwvi
   '@solana/wallet-adapter-react-ui': 0.9.29_wdxom44eswrgvku4xv5zzkndcu
   '@solana/wallet-adapter-wallets': 0.19.15_zbnzhnzrkbql2zfpvapijt5fi4
@@ -69,8 +73,10 @@ dependencies:
   date-fns: 2.28.0
   next: 12.1.6_zfrxh5kngawd2awrv6lhrerxeq
   next-images: 1.8.4_webpack@5.75.0
+  notistack: 3.0.1_pwge5r66yg44rq5pj4ruhckhdm
   nprogress: 0.2.0
   numeral: 2.0.6
+  prop-types: 15.8.1
   react: 17.0.2
   react-apexcharts: 1.4.0_477bfvzpoihl6uyvz3gob3stxa
   react-custom-scrollbars-2: 4.4.0_sfoxds7t5ydpegc3knd667wn6m
@@ -2249,7 +2255,7 @@ packages:
       '@mui/material': 5.8.2_jqqq4ae6eknpwknhunyzzjgfpe
       '@mui/system': 5.11.12_olrj4xg6e7tuisvx2owqisey7a
       '@mui/utils': 5.11.12_react@17.0.2
-      clsx: 1.2.1
+      clsx: 1.1.1
       date-fns: 2.28.0
       prop-types: 15.8.1
       react: 17.0.2
@@ -3013,6 +3019,28 @@ packages:
     dependencies:
       '@solana/wallet-adapter-base': 0.9.22_@solana+web3.js@1.73.3
       '@solana/web3.js': 1.73.3
+    dev: false
+
+  /@solana/wallet-adapter-material-ui/0.16.28_6y2kqynxbmfd7p66dj5tggfl6u:
+    resolution: {integrity: sha512-0k87XrylZAHWuQxqi8Gy3B8j1hehqWNcNBz3YnYfGk1QPH2qcl8lHYm+cQF6ujhZKyWG2Zo81LtpXFc4svN/bg==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@mui/icons-material': '*'
+      '@mui/material': '*'
+      '@solana/web3.js': ^1.58.0
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      '@mui/icons-material': 5.8.2_3pyq5p6nbpquftgqyhblfsxqde
+      '@mui/material': 5.8.2_jqqq4ae6eknpwknhunyzzjgfpe
+      '@solana/wallet-adapter-base': 0.9.22_@solana+web3.js@1.73.3
+      '@solana/wallet-adapter-react': 0.15.30_alczyghn3njhid5xp5niyuxwvi
+      '@solana/web3.js': 1.73.3
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    transitivePeerDependencies:
+      - bs58
+      - react-native
     dev: false
 
   /@solana/wallet-adapter-mathwallet/0.9.17_@solana+web3.js@1.73.3:
@@ -6901,6 +6929,14 @@ packages:
       slash: 3.0.0
     dev: true
 
+  /goober/2.1.12_csstype@3.1.1:
+    resolution: {integrity: sha512-yXHAvO08FU1JgTXX6Zn6sYCUFfB/OJSX8HHjDSgerZHZmFKAb08cykp5LBw5QnmyMcZyPRMqkdyHUSSzge788Q==}
+    peerDependencies:
+      csstype: ^3.0.10
+    dependencies:
+      csstype: 3.1.1
+    dev: false
+
   /gopd/1.0.1:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==}
     dependencies:
@@ -8744,6 +8780,21 @@ packages:
   /normalize-path/3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
+    dev: false
+
+  /notistack/3.0.1_pwge5r66yg44rq5pj4ruhckhdm:
+    resolution: {integrity: sha512-ntVZXXgSQH5WYfyU+3HfcXuKaapzAJ8fBLQ/G618rn3yvSzEbnOB8ZSOwhX+dAORy/lw+GC2N061JA0+gYWTVA==}
+    engines: {node: '>=12.0.0', npm: '>=6.0.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      clsx: 1.1.1
+      goober: 2.1.12_csstype@3.1.1
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    transitivePeerDependencies:
+      - csstype
     dev: false
 
   /npm-run-path/2.0.2:

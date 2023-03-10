@@ -1,21 +1,36 @@
-import { useContext } from 'react';
+import { useContext, useMemo } from 'react';
 import Scrollbar from 'src/components/Scrollbar';
 import { SidebarContext } from 'src/contexts/SidebarContext';
 
 import {
-  Box,
-  Drawer,
   alpha,
-  styled,
+  Box,
+  darken,
   Divider,
-  useTheme,
-  Button,
+  Drawer,
   lighten,
-  darken
+  styled,
+  useTheme
 } from '@mui/material';
 
-import SidebarMenu from './SidebarMenu';
 import Logo from 'src/components/LogoSign';
+import SidebarMenu from './SidebarMenu';
+
+import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
+import {
+  ConnectionProvider,
+  WalletProvider
+} from '@solana/wallet-adapter-react';
+import { clusterApiUrl } from '@solana/web3.js';
+import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
+import {
+  BraveWalletAdapter,
+  GlowWalletAdapter,
+  PhantomWalletAdapter
+} from '@solana/wallet-adapter-wallets';
+import { WalletConnectButton } from '@/components/wallet/WalletConnectButton';
+import { WalletMultiButton } from '@/components/wallet/WalletMultiButton';
+// import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
 const SidebarWrapper = styled(Box)(
   ({ theme }) => `
@@ -29,7 +44,7 @@ const SidebarWrapper = styled(Box)(
 `
 );
 
-function Sidebar() {
+const Sidebar = () => {
   const { sidebarToggle, toggleSidebar } = useContext(SidebarContext);
   const closeSidebar = () => toggleSidebar();
   const theme = useTheme();
@@ -79,7 +94,7 @@ function Sidebar() {
           }}
         />
         <Box p={2}>
-          <Button
+          {/* <Button
             href="#"
             target="_blank"
             rel="noopener noreferrer"
@@ -89,7 +104,15 @@ function Sidebar() {
             fullWidth
           >
             Connect Wallet
-          </Button>
+          </Button> */}
+          {/* <ConnectionProvider endpoint={endpoint}> */}
+          {/* <WalletProvider wallets={wallets} autoConnect={true}> */}
+          {/* <WalletModalProvider> */}
+          {/* <WalletConnectButton /> */}
+          {/* <WalletMultiButton /> */}
+          {/* </WalletModalProvider> */}
+          {/* </WalletProvider> */}
+          {/* </ConnectionProvider> */}
         </Box>
       </SidebarWrapper>
       <Drawer
@@ -134,6 +157,6 @@ function Sidebar() {
       </Drawer>
     </>
   );
-}
+};
 
 export default Sidebar;

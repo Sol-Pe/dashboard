@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useMemo } from 'react';
 
 import {
   Box,
@@ -18,6 +18,23 @@ import CloseTwoToneIcon from '@mui/icons-material/CloseTwoTone';
 import HeaderButtons from './Buttons';
 import HeaderUserbox from './Userbox';
 import HeaderMenu from './Menu';
+
+import { WalletMultiButton } from '@/components/wallet/WalletMultiButton';
+import {
+  ConnectionProvider,
+  WalletProvider
+} from '@solana/wallet-adapter-react';
+import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
+import { clusterApiUrl } from '@solana/web3.js';
+import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
+import {
+  BraveWalletAdapter,
+  PhantomWalletAdapter,
+  GlowWalletAdapter
+} from '@solana/wallet-adapter-wallets';
+import { WalletDialogProvider } from '@/components/wallet/WalletDialogProvider';
+// import { WalletDialogProvider } from '@solana/wallet-adapter-material-ui';
+// import { WalletConnectButton } from '@/components/wallet/WalletConnectButton';
 
 const HeaderWrapper = styled(Box)(
   ({ theme }) => `
@@ -41,6 +58,33 @@ const HeaderWrapper = styled(Box)(
 function Header() {
   const { sidebarToggle, toggleSidebar } = useContext(SidebarContext);
   const theme = useTheme();
+
+  const network = WalletAdapterNetwork.Devnet;
+
+  // You can also provide a custom RPC endpoint.
+  const endpoint = useMemo(() => clusterApiUrl(network), [network]);
+
+  const wallets = useMemo(
+    () => [
+      /**
+       * Wallets that implement either of these standards will be available automatically.
+       *
+       *   - Solana Mobile Stack Mobile Wallet Adapter Protocol
+       *     (https://github.com/solana-mobile/mobile-wallet-adapter)
+       *   - Solana Wallet Standard
+       *     (https://github.com/solana-labs/wallet-standard)
+       *
+       * If you wish to support a wallet that supports neither of those standards,
+       * instantiate its legacy wallet adapter here. Common legacy adapters can be found
+       * in the npm package `@solana/wallet-adapter-wallets`.
+       */
+      new BraveWalletAdapter(),
+      new PhantomWalletAdapter(),
+      new GlowWalletAdapter()
+    ],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [network]
+  );
 
   return (
     <HeaderWrapper
@@ -72,6 +116,18 @@ function Header() {
       </Stack>
       <Box display="flex" alignItems="center">
         <HeaderButtons />
+
+        <ConnectionProvider endpoint={endpoint}>
+          <WalletProvider wallets={wallets} autoConnect={true}>
+            <WalletModalProvider>
+              <WalletDialogProvider>
+                <WalletMultiButton />
+                {/* <WalletConnectButton /> */}
+              </WalletDialogProvider>
+            </WalletModalProvider>
+          </WalletProvider>
+        </ConnectionProvider>
+
         <HeaderUserbox />
         <Box
           component="span"
