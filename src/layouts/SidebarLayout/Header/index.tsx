@@ -122,7 +122,6 @@ function Header() {
             <WalletModalProvider>
               <WalletDialogProvider>
                 <WalletMultiButton />
-                {/* <WalletConnectButton /> */}
               </WalletDialogProvider>
             </WalletModalProvider>
           </WalletProvider>
