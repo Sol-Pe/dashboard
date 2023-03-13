@@ -1,4 +1,4 @@
-import { useContext, useMemo } from 'react';
+import { useContext } from 'react';
 import Scrollbar from 'src/components/Scrollbar';
 import { SidebarContext } from 'src/contexts/SidebarContext';
 
@@ -15,22 +15,6 @@ import {
 
 import Logo from 'src/components/LogoSign';
 import SidebarMenu from './SidebarMenu';
-
-import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
-import {
-  ConnectionProvider,
-  WalletProvider
-} from '@solana/wallet-adapter-react';
-import { clusterApiUrl } from '@solana/web3.js';
-import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
-import {
-  BraveWalletAdapter,
-  GlowWalletAdapter,
-  PhantomWalletAdapter
-} from '@solana/wallet-adapter-wallets';
-import { WalletConnectButton } from '@/components/wallet/WalletConnectButton';
-import { WalletMultiButton } from '@/components/wallet/WalletMultiButton';
-// import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
 const SidebarWrapper = styled(Box)(
   ({ theme }) => `
