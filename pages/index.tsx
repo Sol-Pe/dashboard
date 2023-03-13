@@ -15,7 +15,9 @@ import {
 } from '@solana/wallet-adapter-react';
 import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
 import {
-  BraveWalletAdapter, GlowWalletAdapter, PhantomWalletAdapter
+  BraveWalletAdapter,
+  GlowWalletAdapter,
+  PhantomWalletAdapter
 } from '@solana/wallet-adapter-wallets';
 import { clusterApiUrl } from '@solana/web3.js';
 import Logo from 'src/components/LogoSign';
@@ -71,7 +73,7 @@ function Overview() {
   return (
     <OverviewWrapper>
       <Head>
-        <title>Tokyo Free Black NextJS Typescript Admin Dashboard</title>
+        <title>Sol-Pe Merchant Dashboard</title>
       </Head>
       <HeaderWrapper>
         <Container maxWidth="lg">

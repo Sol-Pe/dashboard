@@ -107,7 +107,7 @@ function Hero() {
         <Grid item md={10} lg={8} mx="auto">
           <LabelWrapper color="success">Version 1.0.0</LabelWrapper>
           <TypographyH1 sx={{ mb: 2 }} variant="h1">
-            Solpe Mechant Dashboard
+            Sol-Pe Mechant Dashboard
           </TypographyH1>
           <TypographyH2
             sx={{ lineHeight: 1.5, pb: 4 }}
@@ -115,7 +115,9 @@ function Hero() {
             color="text.secondary"
             fontWeight="normal"
           >
-          Solpe is a payment gateway and merchant dashboard built on the Solana blockchain, designed to track payment data and provide merchants with comprehensive analytics.
+            Solpe is a payment gateway and merchant dashboard built on the
+            Solana blockchain, designed to track payment data and provide
+            merchants with comprehensive analytics.
           </TypographyH2>
           <Button
             component={Link}
@@ -180,7 +182,8 @@ function Hero() {
                   <b>Built with Typescript</b>
                 </Box>
                 <Typography component="span" variant="subtitle2">
-                  Tokyo Free Black features a modern technology stack and is built with React + Typescript.
+                  Tokyo Free Black features a modern technology stack and is
+                  built with React + Typescript.
                 </Typography>
               </Typography>
             </Grid>
