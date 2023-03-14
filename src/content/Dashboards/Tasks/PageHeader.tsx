@@ -62,9 +62,11 @@ function PageHeader() {
         </Box>
       </Box>
       <Box mt={{ xs: 3, md: 0 }}>
+        <a href="https://sol-pe.vercel.app/?recipient=BmKNWKtgPw7E7YV5A5TBLEAcAy6nfjn72o5FqCGTHamH&label=Shastra">
         <Button variant="contained" startIcon={<DocumentScannerTwoToneIcon />}>
-          Export
+          New
         </Button>
+        </a>
       </Box>
     </Box>
   );
