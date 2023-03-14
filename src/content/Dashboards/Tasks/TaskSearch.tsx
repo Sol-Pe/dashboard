@@ -158,7 +158,7 @@ function TaskSearch() {
               <Rating value={4} defaultValue={5} precision={1} readOnly />
             </Box>
             <Link href="#" variant="h3" color="text.primary">
-              Migrate hosting to a more performant web server datacenter
+              Add a new product to inventory and update stock levels
             </Link>
             <Box
               sx={{
@@ -170,7 +170,7 @@ function TaskSearch() {
                   mr: 0.5
                 }}
                 size="small"
-                label="Website"
+                label="Stock"
                 color="secondary"
                 onClick={handleClick}
                 onDelete={handleDelete}
@@ -180,7 +180,7 @@ function TaskSearch() {
                   mr: 0.5
                 }}
                 size="small"
-                label="Integrations"
+                label="New Product"
                 color="secondary"
                 onClick={handleClick}
                 onDelete={handleDelete}
@@ -192,9 +192,7 @@ function TaskSearch() {
               }}
               color="text.secondary"
             >
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout beatae
-              vitae dicta sunt explicabo.
+              Need to add a new product to their inventory system, including the product name, description, price, and any relevant images or videos. Also need to update the stock levels to ensure they have enough inventory on hand to fulfill customer orders.
             </Typography>
             <Button size="small" variant="contained">
               View task
@@ -266,7 +264,7 @@ function TaskSearch() {
               <Rating value={4} defaultValue={5} precision={1} readOnly />
             </Box>
             <Link href="#" variant="h3" color="text.primary">
-              Improve conversion rated by integrating new analytics tools
+              Process a payment and issue a receipt
             </Link>
             <Box
               sx={{
@@ -300,9 +298,7 @@ function TaskSearch() {
               }}
               color="text.secondary"
             >
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo.
+               I need to be able to process payments quickly and efficiently. I'll use my payment processing system to enter the customer's payment information, verify the payment, and issue a receipt. This will help me keep track of all my transactions and ensure that my customers have a smooth and hassle-free payment experience.
             </Typography>
             <Button size="small" variant="contained">
               View task
@@ -386,7 +382,7 @@ function TaskSearch() {
               <Rating value={4} defaultValue={5} precision={1} readOnly />
             </Box>
             <Link href="#" variant="h3" color="text.primary">
-              Increase the website speed on mobile and tablet devices
+              Improve website on mobile and tablet devices
             </Link>
             <Box
               sx={{
@@ -420,9 +416,7 @@ function TaskSearch() {
               }}
               color="text.secondary"
             >
-              Nemo enim ipsam voluptatem quia accusantium doloremque laudantium
-              voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-              magni dolores eos qui ratione.
+               I need to update and optimize my website to increase sales, enhance user experience, and stay competitive. This involves improving the design, speed, accessibility, and functionality of the website. By continuously improving my website, I can provide a better online shopping experience and achieve business success.
             </Typography>
             <Button size="small" variant="contained">
               View task
